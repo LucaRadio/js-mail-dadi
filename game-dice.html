@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Dice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/game-dice.css">
 </head>
 <body>
-    
+    <div class="container text-center">
+        <h1 class="display-1 py-5 text-danger">Dice Challenge</h1>
+        <button class="rounded-5 btn btn-warning">Generate</button>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h1>Your dice number is:</h1>
+                <div class="mynumber fw-bold fs-1"></div>
+            </div>
+            <div class="col-6">
+                <h1>Computer's dice number is:</h1>
+                <div class="ainumber fw-bold fs-1"></div>
+            </div>
+            <div class="display-1 result py-5"></div>
+        </div>
+    </div>
+    <script src="js/game-dice.js"></script>
 </body>
 </html>
