@@ -6,9 +6,9 @@ const mails = ["my-mail@gmail.com", "my-mail@yahoo.it", "my-mail@hotmail.it", "m
 
 const accountFound = document.querySelector(".message")
 
-let affermative = false;
 
 btnSend.addEventListener("click", function () {
+    let affermative = false;
     mailInserted = mailInput.value;
     console.log("click");
 
@@ -18,12 +18,16 @@ btnSend.addEventListener("click", function () {
         }
     }
     if (affermative === true) {
-        accountFound.innerHTML = `Your Account is in our database. Congrats`
+        accountFound.innerHTML = `Your Account is in our database. Congrats`;
+        accountFound.classList.remove("text-danger");
+        accountFound.classList.add("text-success");
         console.log("Your Account is in our database. Congrats!");
     }
     else {
-        accountFound.innerHTML = `Your Account isn't in our database. Try again!`
+        accountFound.innerHTML = `Your Account isn't in our database. Try again!`;
         console.log("Your Account isn't in our database. Try again!");
+        accountFound.classList.remove("text-success");
+        accountFound.classList.add("text-danger");
     }
 })
 
